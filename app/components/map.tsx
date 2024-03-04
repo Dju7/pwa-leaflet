@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import { Icon, LatLng } from 'leaflet';
 import 'leaflet/dist/leaflet.css'
+import LeafletControlGeocoder from './geoCoder';
 
 function LocationMarker({ onLatLngChange }) {
     
@@ -54,11 +55,12 @@ const MyMap = () => {
 
   return (
     <>
-    <MapContainer center={[40.8054, -74.0241]} zoom={zoom} style={{ height: '700px' }}>
+    <MapContainer center={[48.891897, 2.347856]} zoom={zoom} style={{ height: '700px' }}>
       <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
+    <LeafletControlGeocoder />
       <LocationMarker onLatLngChange={handleLatLngChange}/>
       
     </MapContainer>
