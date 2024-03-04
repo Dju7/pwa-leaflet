@@ -1,0 +1,16 @@
+{
+    "name": "pwa-test",
+    "short_name": "PWA App",
+    "icons": [
+      {
+        "src": "/next.png",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      }
+   
+    ],
+    
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
